@@ -16,7 +16,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "server:start": "cross-env NODE_ENV=production node ./index.js",
-    "server:watch": "nodemon ./index.js"
+    "server:build": "cross-env NODE_ENV=production node ./index.js",
+    "server:watch": "cross-env NODE_ENV=development nodemon ./index.js --watch"
   }
 }
