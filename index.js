@@ -14,11 +14,11 @@ server.use(express.urlencoded({ extended: false }))
 server.use("/api/v1", routes)
 
 if (process.env.NODE_ENV === 'production') {
-  server.use('/', express.static(path.join(__dirname, 'build')))
-  const indexPath = path.join(__dirname, 'build', 'index.html')
-  server.get('*', (req, res) => {
-    res.sendFile(indexPath)
-  })
+  // server.use('/', express.static(path.join(__dirname, 'build')))
+  // const indexPath = path.join(__dirname, 'build', 'index.html')
+  // server.get('*', (req, res) => {
+  //   res.sendFile(indexPath)
+  // })
   console.log(chalk.red('Production'))
 } else {
   console.log(chalk.blue('Development'))
