@@ -9,7 +9,7 @@ COPY . /app
 # Install the application dependencies
 RUN yarn install
 
-# EXPOSE 3001
+EXPOSE 3001
 
 # Define the entry point for the container
 CMD ["yarn", "server:build"]
